@@ -5,7 +5,7 @@ namespace SaferSpacesApi.Models
 {
   public class Testimonial
   {
-    public int TestimonialId { get; }
+    public int TestimonialId { get; set; }
 
     public string Story { get; set; }
 
