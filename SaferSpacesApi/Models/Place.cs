@@ -11,6 +11,7 @@ namespace SaferSpacesApi.Models
       this.Events = new HashSet<Event>();
       this.Testimonials = new HashSet<Testimonial>();
     }
+
     public int PlaceId { get; set; }
     [Required]
     public string Name { get; set; }

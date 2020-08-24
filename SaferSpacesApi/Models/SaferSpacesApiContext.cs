@@ -17,6 +17,10 @@ namespace SaferSpacesApi.Models
 
     public DbSet<Testimonial> Testimonials { get; set; }
 
+    public DbSet<EventPlace> EventPlace { get; set; }
+    public DbSet<EventTestimonial> EventTestimonial { get; set; }
+    public DbSet<PlaceTestimonial> PlaceTestimonial { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
       builder.Entity<Place>()
