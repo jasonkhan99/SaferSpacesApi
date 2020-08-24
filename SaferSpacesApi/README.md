@@ -13,7 +13,7 @@
 
 ## **ABOUT**
 
-- This program will create an API for a local animal shelter.
+- This program will provide the user with
 - The API will list the available cats and dogs at the shelter.
 
 ## **INSTALL NOTES**
@@ -21,11 +21,11 @@
 navigate to desired directory for where your project will go
 git clone url
 add workspace
-cd AnimalShelter
+cd SaferSpaces
 dotnet restore
 dotnet build
 create a new terminal
-cd into AnimalShelter
+cd into SaferSpaces
 dotnet ef database update
 dotnet watch run
 
@@ -149,4 +149,4 @@ _**None as of:** 8/21/2020_
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2020 **_Erich Richter._**
+Copyright (c) 2020 **Brittany*Lindgren_Mariel Hamson_Jason Khan_Erich Richter.***
