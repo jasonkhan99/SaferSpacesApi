@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace SaferSpacesApi.Models
 {
@@ -18,8 +19,17 @@ namespace SaferSpacesApi.Models
     [Required]
     public string Address { get; set; }
     public string Description { get; set; }
-    public bool Restroom { get; set; }
+    [DisplayName("Restroom Details")]
+    public Restroom RestroomFeatures { get; set; }
     public virtual ICollection<Event> Events { get; set; }
     public virtual ICollection<Testimonial> Testimonials { get; set; }
+  }
+
+  public enum Restroom
+  {
+    Accessible,
+    GenderNeutral,
+    Both,
+    None
   }
 }
