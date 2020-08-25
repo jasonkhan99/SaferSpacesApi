@@ -26,26 +26,26 @@ namespace SaferSpacesApi.Controllers
     }
 
     [HttpPost]
-    public void Post([FromBody] Event event)
+    public void Post([FromBody] Event gathering)
     {
-      _db.Events.Add(event);
-    _db.SaveChanges();
+      _db.Events.Add(gathering);
+      _db.SaveChanges();
     }
 
-  [HttpPut("{id}")]
-  public void Put(int id, [FromBody] Event event)
-  {
-    event.EventId = id;
-    _db.Entry(event).State = EntityState.Modified;
-    _db.SaveChanges();
-  }
+    [HttpPut("{id}")]
+    public void Put(int id, [FromBody] Event gathering)
+    {
+      gathering.EventId = id;
+      _db.Entry(gathering).State = EntityState.Modified;
+      _db.SaveChanges();
+    }
 
-  [HttpDelete("{id}")]
-  public void Delete(int id)
-  {
-    var eventToDelete = _db.Events.FirstOrDefault(entry => entry.EventId == id);
-    _db.Events.Remove(eventToDelete);
-    _db.SaveChanges();
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
+      var eventToDelete = _db.Events.FirstOrDefault(entry => entry.EventId == id);
+      _db.Events.Remove(eventToDelete);
+      _db.SaveChanges();
+    }
   }
-}
 }
