@@ -25,6 +25,12 @@ namespace SaferSpacesApi.Controllers
       return _db.Events.ToList();
     }
 
+    [HttpGet("{id}")]
+    public ActionResult<Event> Get(int id)
+    {
+      return _db.Events.FirstOrDefault(entry => entry.EventId == id);
+    }
+
     [HttpPost]
     public void Post([FromBody] Event gathering)
     {

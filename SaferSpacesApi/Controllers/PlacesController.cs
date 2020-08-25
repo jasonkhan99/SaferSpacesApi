@@ -39,6 +39,12 @@ namespace SaferSpacesApi.Controllers
       return query.ToList();
     }
 
+    [HttpGet("{id}")]
+    public ActionResult<Place> Get(int id)
+    {
+      return _db.Places.FirstOrDefault(entry => entry.PlaceId == id);
+    }
+
     [HttpPost]
     public void Post([FromBody] Place place)
     {
